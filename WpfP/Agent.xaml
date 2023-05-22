@@ -17,14 +17,14 @@
                    FontSize="16" 
                    Margin="5,23,738,400"/>
         <TextBox HorizontalAlignment="Left" 
-                 Margin="62,20,0,0" 
+                 Margin="62,25,0,0" 
                  TextWrapping="Wrap" 
                  VerticalAlignment="Top" 
                  Width="133" 
                  x:Name="Poisk" 
                  TextChanged="Poisk_TextChanged" 
-                 Height="27" 
-                 FontSize="14"
+                 Height="20" 
+                 FontSize="16"
                  FontFamily="Monotype Corsiva"/>
         <TextBlock Text="Сортировка: "
                    Foreground="#46B29D"
@@ -54,13 +54,14 @@
         <ListView d:InputScope="{Binding Агент}"
                   Margin="0,70,0,0"
                   x:Name="Gaz" 
-                  FontSize="14"
+                  FontSize="18"
                   FontFamily="Monotype Corsiva">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid MouseLeftButtonDown="Gaz_MouseLeftButtonDown">
                         <TextBlock x:Name="name"
-                                   Margin="10,0,0,0">
+                                   Margin="10,0,0,0" 
+                                   Foreground="#FF46B29D">
                             <Run Text="{Binding Тип_агента}"/>
                             <Run Text="| "/>
                             <Run Text="{Binding Наименование_агента}"/>
