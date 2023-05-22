@@ -10,6 +10,17 @@
       Title="UpdAgent">
 
     <Grid>
-        
+        <Button Content="Выход" 
+                HorizontalAlignment="Left" 
+                Margin="730,10,0,0" 
+                VerticalAlignment="Top" 
+                FontFamily="Monotype Corsiva" 
+                Background="White" 
+                FontSize="18" 
+                Foreground="#FF46B29D" 
+                Height="30" 
+                Width="60" 
+                Click="Button_Click"/>
+
     </Grid>
 </Page>

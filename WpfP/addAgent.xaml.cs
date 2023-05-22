@@ -22,9 +22,13 @@ namespace WpfP
     public partial class addAgent : Page
     {
         public Frame frame1;
-        public addAgent()
+        public addAgent(Frame frame)
         {
             InitializeComponent();
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            frame1.Navigate(new Agent(frame1));
         }
     }
 }

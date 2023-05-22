@@ -22,9 +22,14 @@ namespace WpfP
     public partial class UpdAgent : Page
     {
         public Frame frame1;
-        public UpdAgent()
+        public UpdAgent(Frame frame)
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            frame1.Navigate(new Agent( frame1));
         }
     }
 }
