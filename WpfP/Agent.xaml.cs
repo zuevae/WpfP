@@ -69,5 +69,10 @@ namespace WpfP
             object j = Gaz.SelectedItem;
             //frame1.Navigate(new update(frame1, j)); //при нажтии переход на другую страницу(update)
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            frame1.Navigate(new addAgent(frame1));
+        }
     }
 }

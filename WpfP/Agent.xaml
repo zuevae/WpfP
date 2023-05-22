@@ -51,6 +51,16 @@
         <ComboBox x:Name="ComboType_Copy"
                   SelectionChanged="ComboType_Copy_SelectionChanged" 
                   Margin="571,23,52,417"/>
+        <Button Content="+" 
+                HorizontalAlignment="Left" 
+                Margin="753,22,0,0" 
+                VerticalAlignment="Top" 
+                Width="22" 
+                FontSize="24" 
+                FontWeight="Bold"
+                Foreground="#46B29D"
+                Background="White" 
+                FontFamily="Monotype Corsiva" Click="Button_Click"/>
         <ListView d:InputScope="{Binding Агент}"
                   Margin="0,70,0,0"
                   x:Name="Gaz" 
