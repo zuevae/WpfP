@@ -23,7 +23,7 @@ namespace WpfP
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new Agent(MainFrame));
+            MainFrame.Navigate(new Agent(MainFrame));       //при запуске программы открывается страница "Agent"
         }
     }
 }

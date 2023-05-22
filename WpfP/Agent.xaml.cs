@@ -21,25 +21,53 @@ namespace WpfP
     public partial class Agent : Page
     {
         public Frame frame1;
+        List<Агент> агент = new List<Агент>();
         public Agent(Frame frame)
         {
             InitializeComponent();
             frame1 = frame;
+            //агент = Entities.GetContext().Агент.ToList();
+            //Gaz.ItemsSource = агент;
         }
 
         private void Poisk_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            Update();
+        }
+        public void Update()
+        {
+            var poisk = Entities.GetContext().Агент.ToList();
+            poisk = poisk.Where(p => p.Наименование_агента.ToLower().Contains(Poisk.Text.ToLower())).ToList();
+            Gaz.ItemsSource = poisk;
         }
 
         private void ComboType_SelectionChangedAsync(object sender, SelectionChangedEventArgs e)
         {
-
+            //Update();
         }
 
         private void ComboType_Copy_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            //var currentService = Entities1.GetContex().Service.ToList();
+            //if (ComboType_Copy.SelectedIndex == 1)
+            //{
+            //    for (int i = 0; i < currentService.Count; i++)
+            //    {
+            //        if (currentService[i].price > 500)
+            //        {
+            //            currentService.RemoveAt(i);
+            //            i--;
+            //        }
+            //    }
+            //}
+            //currentService = currentService.Where(p => p.service1.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
+            //LViewServ.ItemsSource = currentService.ToList();
+        }
+        private async void Gaz_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            await Task.Delay(100);
+            object j = Gaz.SelectedItem;
+            //frame1.Navigate(new update(frame1, j)); //при нажтии переход на другую страницу(update)
         }
     }
 }

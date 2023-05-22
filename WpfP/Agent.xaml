@@ -36,7 +36,7 @@
                   DisplayMemberPath="service1"
                   FontFamily="Monotype Corsiva" 
                   SelectionChanged="ComboType_SelectionChangedAsync" 
-                  Margin="294,20,331,453"
+                  Margin="294,23,331,417"
                           />
         <TextBlock Text="Фильтрация: "
                    Foreground="#46B29D"
@@ -50,7 +50,107 @@
                    Margin="484,25,0,0"/>
         <ComboBox x:Name="ComboType_Copy"
                   SelectionChanged="ComboType_Copy_SelectionChanged" 
-                  Margin="571,20,52,453"/>
-        
+                  Margin="571,23,52,417"/>
+        <ListView d:InputScope="{Binding Агент}"
+                  Margin="0,70,0,0"
+                  x:Name="Gaz" 
+                  FontSize="14"
+                  FontFamily="Monotype Corsiva">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid MouseLeftButtonDown="Gaz_MouseLeftButtonDown">
+                        <TextBlock x:Name="name"
+                                   Margin="10,0,0,0">
+                            <Run Text="{Binding Тип_агента}"/>
+                            <Run Text="| "/>
+                            <Run Text="{Binding Наименование_агента}"/>
+                            <Run Text=""/>
+                            <Run/><LineBreak/>
+                            <Run Text="{Binding }"/>
+                            <Run Text="продаж за год"/>
+                            <Run Text=""/>
+                            <Run/><LineBreak/>
+                            <Run Text="{Binding Телефон_агента}"/>
+                            <Run Text=""/>
+                            <Run/><LineBreak/>
+                            <Run Text="Приоритетность: "/>
+                            <Run Text="{Binding Приоритет}"/>
+                        </TextBlock>
+                        <Image Source="{Binding Логотип_агента}"
+                               Width="200"
+                               Height="200">
+                        </Image>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Grid Margin="496,403,496,59" 
+              Visibility="Hidden" 
+              x:Name="Str2">
+            <StackPanel Orientation="Horizontal" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Center">
+                <TextBlock Name="txtPrev12" 
+                           FontFamily="Comic Sans MS" 
+                           FontSize="30" 
+                           Uid="prev1" 
+                           Text="&lt;&lt;" 
+                           Foreground="#46B29D">
+                </TextBlock>
+                <TextBlock Name="txtPrev2" 
+                           FontFamily="Monotype Corsiva" 
+                           FontSize="30" 
+                           Uid="prev" 
+                           Text=" &lt;" 
+                           Foreground="#46B29D"/>
+                <TextBlock Name="txt12" 
+                           FontFamily="Monotype Corsiva"
+                           FontSize="30" 
+                           Uid="1" 
+                           Text="{Binding  Path = NPage[0]}" 
+                           Visibility="{Binding Visible[0]}" 
+                           FontWeight="{Binding Bold[0]}"/>
+                <TextBlock Name="txt22" 
+                           FontFamily="Monotype Corsiva" 
+                           FontSize="30" 
+                           Uid="2" 
+                           Text="{Binding  Path = NPage[1]}" 
+                           Visibility="{Binding Visible[1]}" 
+                           FontWeight="{Binding Bold[1]}"/>
+                <TextBlock Name="txt32" 
+                           FontFamily="Monotype Corsiva" 
+                           FontSize="30" 
+                           Uid="3" 
+                           Text="{Binding  Path = NPage[2]}" 
+                           Visibility="{Binding Visible[2]}" 
+                           FontWeight="{Binding Bold[2]}"/>
+                <TextBlock Name="txt42" 
+                           FontFamily="Monotype Corsiva" 
+                           FontSize="30" 
+                           Uid="4" 
+                           Text="{Binding  Path = NPage[3]}" 
+                           Visibility="{Binding Visible[3]}" 
+                           FontWeight="{Binding Bold[3]}"/>
+                <TextBlock Name="txt52" 
+                           FontFamily="Monotype Corsiva" 
+                           FontSize="30" 
+                           Uid="5" 
+                           Text="{Binding  Path = NPage[4]}" 
+                           Visibility="{Binding Visible[4]}" 
+                           FontWeight="{Binding Bold[4]}"/>
+                <TextBlock Name="txtNext2" 
+                           FontFamily="Monotype Corsiva" 
+                           FontSize="30" 
+                           Uid="next" 
+                           Text=" &gt;" 
+                           Foreground="#46B29D"/>
+                <TextBlock Name="txtNext12" 
+                           FontFamily="Monotype Corsiva" 
+                           FontSize="30" 
+                           Uid="next1" 
+                           Text=" &gt;&gt;" 
+                           Foreground="#46B29D"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Page>
