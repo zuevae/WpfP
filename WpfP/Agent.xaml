@@ -66,10 +66,6 @@
                             <Run Text="{Binding Наименование_агента}"/>
                             <Run Text=""/>
                             <Run/><LineBreak/>
-                            <Run Text="{Binding }"/>
-                            <Run Text="продаж за год"/>
-                            <Run Text=""/>
-                            <Run/><LineBreak/>
                             <Run Text="{Binding Телефон_агента}"/>
                             <Run Text=""/>
                             <Run/><LineBreak/>

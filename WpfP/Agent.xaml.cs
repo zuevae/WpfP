@@ -26,8 +26,8 @@ namespace WpfP
         {
             InitializeComponent();
             frame1 = frame;
-            //агент = Entities.GetContext().Агент.ToList();
-            //Gaz.ItemsSource = агент;
+            агент = Entities.GetContext().Агент.ToList();
+            Gaz.ItemsSource = агент;
         }
 
         private void Poisk_TextChanged(object sender, TextChangedEventArgs e)
@@ -48,7 +48,7 @@ namespace WpfP
 
         private void ComboType_Copy_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //var currentService = Entities1.GetContex().Service.ToList();
+            //var currentService = Entities.GetContext().Service.ToList();
             //if (ComboType_Copy.SelectedIndex == 1)
             //{
             //    for (int i = 0; i < currentService.Count; i++)
@@ -60,7 +60,7 @@ namespace WpfP
             //        }
             //    }
             //}
-            //currentService = currentService.Where(p => p.service1.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
+            //currentService = currentService.Where(p => p.Наименование_агента.ToLower().Contains(Poisk.Text.ToLower())).ToList();
             //LViewServ.ItemsSource = currentService.ToList();
         }
         private async void Gaz_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
