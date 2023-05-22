@@ -1,0 +1,56 @@
+﻿<Page x:Class="WpfP.Agent"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfP"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" 
+      d:DesignWidth="800"
+      Title="Agent">
+
+    <Grid>
+        <TextBlock Text="Поиск: "
+                   Foreground="#46B29D"
+                   FontFamily="Monotype Corsiva"
+                   TextAlignment="Right" 
+                   FontSize="16" 
+                   Margin="5,23,738,400"/>
+        <TextBox HorizontalAlignment="Left" 
+                 Margin="62,20,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="133" 
+                 x:Name="Poisk" 
+                 TextChanged="Poisk_TextChanged" 
+                 Height="27" 
+                 FontSize="14"
+                 FontFamily="Monotype Corsiva"/>
+        <TextBlock Text="Сортировка: "
+                   Foreground="#46B29D"
+                   FontFamily="Monotype Corsiva"
+                   TextAlignment="Right" 
+                   FontSize="16" 
+                   Margin="200,25,506,400"/>
+        <ComboBox x:Name="ComboType"
+                  DisplayMemberPath="service1"
+                  FontFamily="Monotype Corsiva" 
+                  SelectionChanged="ComboType_SelectionChangedAsync" 
+                  Margin="294,20,331,453"
+                          />
+        <TextBlock Text="Фильтрация: "
+                   Foreground="#46B29D"
+                   Width="87"
+                   FontFamily="Monotype Corsiva"
+                   TextAlignment="Right" 
+                   FontSize="16" 
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Top" 
+                   Height="30" 
+                   Margin="484,25,0,0"/>
+        <ComboBox x:Name="ComboType_Copy"
+                  SelectionChanged="ComboType_Copy_SelectionChanged" 
+                  Margin="571,20,52,453"/>
+        
+    </Grid>
+</Page>

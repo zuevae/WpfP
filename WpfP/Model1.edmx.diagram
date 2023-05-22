@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2881773bb1ad456aa87df600df64d439" Name="Diagram1">
+        <EntityTypeShape EntityType="P_PodModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="P_PodModel.Агент" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="P_PodModel.Газеты" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="P_PodModel.Продукция" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="P_PodModel.ТипПродукции" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="P_PodModel.ТипыАгентов" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <AssociationConnector Association="P_PodModel.FK_Агент_ТипыАгентов" ManuallyRouted="false" />
+        <AssociationConnector Association="P_PodModel.FK_Газеты_Агент" ManuallyRouted="false" />
+        <AssociationConnector Association="P_PodModel.FK_Газеты_Продукция" ManuallyRouted="false" />
+        <AssociationConnector Association="P_PodModel.FK_Продукция_ТипПродукции" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
