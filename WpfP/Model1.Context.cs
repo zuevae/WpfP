@@ -15,11 +15,16 @@ namespace WpfP
     
     public partial class Entities : DbContext
     {
+        private static Entities _Bd;
         public Entities()
             : base("name=Entities")
         {
         }
-    
+        public static Entities GetContext()
+        {
+            if (_Bd == null) _Bd = new Entities();
+            return _Bd;
+        }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
