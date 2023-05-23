@@ -60,7 +60,8 @@
                 FontWeight="Bold"
                 Foreground="#46B29D"
                 Background="White" 
-                FontFamily="Monotype Corsiva" Click="Button_Click"/>
+                FontFamily="Monotype Corsiva" 
+                Click="Button_Click"/>
         <ListView d:InputScope="{Binding Агент}"
                   Margin="0,70,0,0"
                   x:Name="Gaz" 
@@ -87,6 +88,18 @@
                                Width="200"
                                Height="200">
                         </Image>
+                        <Button x:Name="UpdA"
+                                Content="Редактировать" 
+                                HorizontalAlignment="Left" 
+                                VerticalAlignment="Top" 
+                                Width="160"
+                                Margin="20,60,300,0"
+                                FontSize="20" 
+                                FontWeight="Bold"
+                                Foreground="#46B29D"
+                                Background="White" 
+                                FontFamily="Monotype Corsiva" 
+                                Click="UpdA_Click"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

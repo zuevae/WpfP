@@ -74,5 +74,9 @@ namespace WpfP
         {
             frame1.Navigate(new addAgent(frame1));
         }
+        private void UpdA_Click(object sender, RoutedEventArgs e)
+        {
+            frame1.Navigate(new UpdAgent(frame1));
+        }
     }
 }
