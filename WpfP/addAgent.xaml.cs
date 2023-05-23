@@ -25,6 +25,7 @@ namespace WpfP
         public addAgent(Frame frame)
         {
             InitializeComponent();
+            frame1 = frame;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
