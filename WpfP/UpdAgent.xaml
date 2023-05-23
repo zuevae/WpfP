@@ -5,22 +5,252 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfP"
       mc:Ignorable="d" 
-      d:DesignHeight="500" 
+      d:DesignHeight="1500" 
       d:DesignWidth="800"
       Title="UpdAgent">
 
     <Grid>
         <Button Content="Выход" 
                 HorizontalAlignment="Left" 
-                Margin="715,10,0,0" 
+                Margin="685,10,0,0" 
                 VerticalAlignment="Top" 
                 FontFamily="Monotype Corsiva" 
                 Background="White" 
-                FontSize="18" 
+                FontSize="30" 
                 Foreground="#FF46B29D" 
-                Height="30" 
-                Width="60" 
+                Height="41" 
+                Width="90" 
                 Click="Button_Click"/>
+
+
+        <Label Content="ID Тип агента" 
+               FontSize="40" 
+               Width="261" 
+               HorizontalAlignment="Left" 
+               Foreground="#FF46B29D" 
+               FontWeight="Normal" 
+               FontStyle="Normal" 
+               FontFamily="Monotype Corsiva"  
+               Margin="275,68,0,1383"/>
+
+        <TextBox x:Name="id_tipA" 
+                 HorizontalAlignment="Left"
+                 TextWrapping="Wrap" 
+                 FontFamily="Monotype Corsiva" 
+                 Height="60" 
+                 Width="520" 
+                 FontSize="40" 
+                 VerticalAlignment="Top" 
+                 TextAlignment="Center" 
+                 Margin="146,117,0,0" />
+
+        <Label Content="Наименование агента" 
+               HorizontalAlignment="Center" 
+               FontSize="40" 
+               Width="340" 
+               Foreground="#FF46B29D" 
+               FontWeight="Normal" 
+               FontStyle="Normal" 
+               FontFamily="Monotype Corsiva"  
+               Margin="0,182,0,1266"/>
+
+        <TextBox x:Name="nameA" 
+                 HorizontalAlignment="Left"
+                 FontSize="40" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Height="60" 
+                 Width="520" 
+                 FontFamily="Monotype Corsiva" 
+                 TextAlignment="Center" 
+                 Margin="146,234,0,0" />
+
+        <Label Content="Электронная почта" 
+               HorizontalAlignment="Left" 
+               FontSize="40" 
+               Width="316" 
+               Foreground="#FF46B29D" 
+               FontWeight="Normal" 
+               FontStyle="Normal" 
+               FontFamily="Monotype Corsiva"  
+               Margin="244,299,0,1147" />
+
+        <TextBox x:Name="pochtaA" 
+                 HorizontalAlignment="Left"
+                 FontSize="40" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Height="60" 
+                 Width="520" 
+                 FontFamily="Monotype Corsiva" 
+                 TextAlignment="Center" 
+                 Margin="146,358,0,0"/>
+
+        <Label Content="Телефон агента" 
+               HorizontalAlignment="Left" 
+               FontSize="40" 
+               Width="272" 
+               Foreground="#FF46B29D" 
+               FontWeight="Normal" 
+               FontStyle="Normal" 
+               FontFamily="Monotype Corsiva"  
+               Margin="270,423,0,1022"/>
+
+
+        <TextBox x:Name="telA" 
+                 HorizontalAlignment="Left"
+                 FontSize="40" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Height="60" 
+                 Width="520" 
+                 FontFamily="Monotype Corsiva" 
+                 TextAlignment="Center" 
+                 Margin="146,478,0,0"/>
+
+
+        <Label Content="Дата предоставления услуги" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Top" 
+               FontSize="40" 
+               Height="60" 
+               Width="454" 
+               Foreground="#FF46B29D" 
+               FontWeight="Normal" 
+               FontStyle="Normal" 
+               FontFamily="Monotype Corsiva"  
+               Margin="179,543,0,0" />
+
+        <TextBox x:Name="dataUpd" 
+                 HorizontalAlignment="Left"
+                 FontSize="40" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Height="60" 
+                 Width="524" 
+                 FontFamily="Monotype Corsiva" 
+                 TextAlignment="Center" 
+                 Margin="144,608,0,0"/>
+
+        <Label Content="Юридическтй адрес агента" 
+               HorizontalAlignment="Left" 
+               FontSize="40" 
+               Width="428" 
+               Foreground="#FF46B29D" 
+               FontWeight="Normal" 
+               FontStyle="Normal" 
+               FontFamily="Monotype Corsiva"  
+               Margin="192,672,0,771" />
+
+        <TextBox x:Name="adressA" 
+                 HorizontalAlignment="Left"
+                 FontSize="40" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Height="60" 
+                 Width="520" 
+                 FontFamily="Monotype Corsiva" 
+                 TextAlignment="Center" 
+                 Margin="146,729,0,0"/>
+
+        <Label Content="Директор" 
+               HorizontalAlignment="Left" 
+               FontSize="40" 
+               Height="60" 
+               Width="174" 
+               Foreground="#FF46B29D" 
+               FontWeight="Normal" 
+               FontStyle="Normal" 
+               FontFamily="Monotype Corsiva"  
+               Margin="319,794,0,646"/>
+
+
+        <TextBox x:Name="DA" 
+                 HorizontalAlignment="Left"
+                 FontSize="40" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Height="60" 
+                 Width="520" 
+                 FontFamily="Monotype Corsiva" 
+                 TextAlignment="Center" 
+                 Margin="146,854,0,0"/>
+
+
+        <Label Content="КПП" 
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Top" 
+               FontSize="40" 
+               Height="62" 
+               Width="108" 
+               Foreground="#FF46B29D" 
+               FontWeight="Normal" 
+               FontStyle="Normal" 
+               FontFamily="Monotype Corsiva"  
+               Margin="0,914,0,0" />
+
+        <TextBox x:Name="KPPA" 
+                 HorizontalAlignment="Left"
+                 FontSize="40" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Height="60" 
+                 Width="520" 
+                 FontFamily="Monotype Corsiva" 
+                 TextAlignment="Center" 
+                 Margin="146,976,0,0"/>
+
+        <Label Content="ИНН" 
+               HorizontalAlignment="Left" 
+               FontSize="40" 
+               Width="107" 
+               Foreground="#FF46B29D" 
+               FontWeight="Normal" 
+               FontStyle="Normal" 
+               FontFamily="Monotype Corsiva"  
+               Margin="349,1041,0,400" 
+               RenderTransformOrigin="0.494,0.52" />
+
+        <TextBox x:Name="INNA" 
+                 HorizontalAlignment="Left"
+                 FontSize="40" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Height="60" 
+                 Width="517" 
+                 FontFamily="Monotype Corsiva" 
+                 TextAlignment="Center" 
+                 Margin="144,1100,0,0"/>
+
+        <TextBlock x:Name="UpdData" 
+                   Text="Изменить" 
+                   TextDecorations="Underline" 
+                   TextAlignment="Center" 
+                   TextWrapping="WrapWithOverflow" 
+                   FontWeight="Bold" 
+                   Foreground="#FF46B29D" 
+                   FontSize="40" 
+                   FontFamily="Monotype Corsiva" 
+                   Cursor="Hand" 
+                   MouseLeftButtonDown="UpdData_MouseLeftButtonDown" 
+                   Margin="46,1237,531,214"/>
+        
+        <TextBlock x:Name="DelData" 
+                   Text="Удалить" 
+                   TextDecorations="Underline" 
+                   TextAlignment="Center" 
+                   TextWrapping="WrapWithOverflow"
+                   Width="229" 
+                   FontWeight="Bold" 
+                   Foreground="#FF46B29D" 
+                   FontSize="40" 
+                   MouseLeftButtonDown="Result_Delete"
+                   FontFamily="Monotype Corsiva" 
+                   Cursor="Hand" 
+                   RenderTransformOrigin="0.095,0.483" 
+                   Margin="546,1234,25,214" />
+
+
 
     </Grid>
 </Page>
