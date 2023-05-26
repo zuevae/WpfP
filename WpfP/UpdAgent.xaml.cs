@@ -1,5 +1,4 @@
-﻿using Aspose.BarCode.Generation;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,22 +23,22 @@ namespace WpfP
     {
         public Frame frame1;
         object Item;
-        Agent thisAgent;
+        Agent thisАгент;
         List<Агент> агент = new List<Агент>();
         List<Газеты> газеты = new List<Газеты>();
         string Log;
-        public UpdAgent(string log, Frame frame, Agent агент)
+        public UpdAgent(string log, Frame frame, Агент agent)
         {
             InitializeComponent();
             DataContext = this;
             frame1 = frame;
-            thisAgent = agent;
+            thisАгент = agent;
             Log = log;
             агент = Entities.GetContext().Агент.ToList();
 
             for (int i = 0; i < агент.Count; i++)
             {
-                if (агент[i].agent == thisAgent.agent)
+                if (агент[i].agent == thisАгент.agent)
                 {
                     id_tipA.Text = агент[i].Тип_агента.ToString();
                     nameA.Text = агент[i].Наименование_агента.ToString();
@@ -99,9 +98,9 @@ namespace WpfP
                 // List_Results[0].id = count + 1;
                 if (int.TryParse(id_tipA.Text, out id_t))
                 {
-                    if (int.TryParse(nameA.Text, out n))
+                    if (char.TryParse(nameA.Text, out n))
                     {
-                        if (int.TryParse(pochtaA.Text, out p))
+                        if (char.TryParse(pochtaA.Text, out p))
                         {
                             if (char.TryParse(telA.Text, out tel))
                             {
@@ -125,8 +124,8 @@ namespace WpfP
                                                     List_Agents[0].КПП = k;
                                                     List_Agents[0].ИНН = inn;
                                                     Entities.GetContext().SaveChanges();
-                                                    frame1.Navigate(new Agent(Log, frame1, Item));
-                                                }
+                                                //frame1.Navigate(new Agent(Log, frame1, Item));
+                                            }
                                                 else
                                                 {
                                                     MessageBox.Show("Неверно введёна дата");
